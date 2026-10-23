@@ -4,7 +4,192 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shiv Srinath Kammadari | Technical Product Manager</title>
+  <link rel="stylesheet" href="style.css"><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shiv Srinath Kammadari | Technical Product Specialist</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="navbar">
+    <div class="logo">
+      <span class="avatar">SK</span>
+      <div class="brand">
+        <strong>Shiv Srinath Kammadari</strong>
+        <span class="subtitle">Technical Product Specialist</span>
+      </div>
+    </div>
+    <nav>
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="resume.pdf" target="_blank" class="btn-resume">View Resume ↗</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <main>
+    <section class="hero">
+      <p class="tagline">Product & Systems Architecture</p>
+      <h1>Turning complex technical rules into shipped products with measurable outcomes.</h1>
+      <p class="hero-desc">
+        Leveraging a dual foundation in <strong>M.S. Analytics & Machine Learning</strong> and <strong>M.S. Mechanical Engineering</strong> to design high-trust decision-support software for regulated and complex technical environments.
+      </p>
+    </section>
+
+    <!-- Flagship Work Reel -->
+    <section id="work" class="work-section">
+      <div class="section-header">
+        <div>
+          <p class="tagline">Selected Product Work</p>
+          <h2>Three domains. Complex rules. Clear human control.</h2>
+        </div>
+      </div>
+
+      <div class="grid">
+        <!-- Project Card 1 -->
+        <article class="card" onclick="openModal('modal-1')">
+          <div class="card-top">
+            <span class="badge ai">AI & Health Tech</span>
+            <span class="num">01</span>
+          </div>
+          <h3>Human-in-the-Loop Explainable AI Engine</h3>
+          <p>Grounded diagnostic decision support using Grad-CAM heatmap visualizations to give experts full auditability over model outputs.</p>
+          <div class="metric">
+            <strong>100% Explainable</strong>
+            <small>Visual auditability for domain experts</small>
+          </div>
+          <button class="btn-card">Read Case Study ↗</button>
+        </article>
+
+        <!-- Project Card 2 -->
+        <article class="card" onclick="openModal('modal-2')">
+          <div class="card-top">
+            <span class="badge ops">Regulated Engineering</span>
+            <span class="num">02</span>
+          </div>
+          <h3>Algorithmic Structural Optimization</h3>
+          <p>Translating structural mechanics and Finite Element Analysis (FEA) safety constraints into automated optimization workflows.</p>
+          <div class="metric">
+            <strong>Automated Compliance</strong>
+            <small>Engineered structural weight optimization</small>
+          </div>
+          <button class="btn-card">Read Case Study ↗</button>
+        </article>
+
+        <!-- Project Card 3 -->
+        <article class="card" onclick="openModal('modal-3')">
+          <div class="card-top">
+            <span class="badge platform">Enterprise Operations</span>
+            <span class="num">03</span>
+          </div>
+          <h3>Multi-State Demand & Workorder Engine</h3>
+          <p>Automated market demand forecasting and workorder bottleneck analytics across 200+ enterprise client accounts.</p>
+          <div class="metric">
+            <strong>+35% Accuracy</strong>
+            <small>Measured demand forecast improvement</small>
+          </div>
+          <button class="btn-card">Read Case Study ↗</button>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- Interactive Case Study Deep-Dive Modals -->
+
+  <!-- Modal 1 -->
+  <div id="modal-1" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('modal-1')">&times;</span>
+      <span class="badge ai">AI & Health Tech Whitepaper</span>
+      <h2>IMPACT-Net: Human-in-the-Loop Explainable AI Engine</h2>
+      <div class="modal-body">
+        <h3>Problem Statement</h3>
+        <p>Medical diagnostic AI models often operate as "black boxes." When models predict outcomes without visual backing, domain experts (clinicians) cannot verify the reasoning, leading to low trust in critical environments.</p>
+        
+        <h3>Product Solution & Architecture</h3>
+        <ul>
+          <li><strong>PRD & Workflow Definition:</strong> Defined specifications for a transfer-learning framework (IMPACT-Net) to process NIH chest X-ray datasets.</li>
+          <li><strong>Explainability Integration:</strong> Implemented Grad-CAM heatmaps overlaying visual evidence directly onto imaging outputs, ensuring human clinicians retain final decision authority.</li>
+          <li><strong>Domain Shift Mitigation:</strong> Structured data preprocessing pipelines to standardize multi-source inputs and eliminate bias.</li>
+        </ul>
+
+        <div class="modal-metric-box">
+          <div><strong>100%</strong><small>Visual Auditability</small></div>
+          <div><strong>ResNet</strong><small>Adapted Architecture</small></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 2 -->
+  <div id="modal-2" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('modal-2')">&times;</span>
+      <span class="badge ops">Regulated Engineering Whitepaper</span>
+      <h2>Automated Structural Optimization System</h2>
+      <div class="modal-body">
+        <h3>Problem Statement</h3>
+        <p>Evaluating load-bearing frameworks against structural stress constraints manually requires slow, expensive finite element simulation cycles.</p>
+
+        <h3>Product Solution & Architecture</h3>
+        <ul>
+          <li><strong>Rules Translation:</strong> Translated complex solid mechanics equations into algorithmic software constraints.</li>
+          <li><strong>Genetic Algorithm Engine:</strong> Programmed a probabilistic optimization engine in MATLAB using Rank Tournament and Stochastic Universal selection to automate structural weight reduction.</li>
+          <li><strong>FEA Validation:</strong> Correlated numerical simulations with real-world physical constraints in HyperWorks and ANSYS.</li>
+        </ul>
+
+        <div class="modal-metric-box">
+          <div><strong>MATLAB</strong><small>GA Engine</small></div>
+          <div><strong>100%</strong><small>Code Compliance</small></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 3 -->
+  <div id="modal-3" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('modal-3')">&times;</span>
+      <span class="badge platform">Enterprise Operations Whitepaper</span>
+      <h2>Multi-State Market Demand & Workorder Engine</h2>
+      <div class="modal-body">
+        <h3>Problem Statement</h3>
+        <p>Disjointed workorder processing across 15+ states led to operational bottlenecks and unpredictable resource deployment schedules for 200+ enterprise clients.</p>
+
+        <h3>Product Solution & Architecture</h3>
+        <ul>
+          <li><strong>Product Discovery:</strong> Interfaced with operations teams to analyze support case data and identify process friction points.</li>
+          <li><strong>Automated Data Pipelines:</strong> Designed SQL workflows and executive Power BI dashboards to track real-time demand patterns and resource distribution.</li>
+          <li><strong>Forecast Optimization:</strong> Applied statistical time-series forecasting to historical workorder datasets.</li>
+        </ul>
+
+        <div class="modal-metric-box">
+          <div><strong>+35%</strong><small>Forecast Accuracy</small></div>
+          <div><strong>-60%</strong><small>Report Prep Time</small></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2026 Shiv Srinath Kammadari · Technical Product Specialist</p>
+    <div class="footer-links">
+      <a href="mailto:sk3@usf.edu">Contact</a> ·
+      <a href="https://github.com/shivkammadari23" target="_blank">GitHub</a> ·
+      <a href="https://scholar.google.com/citations?hl=en&user=CRAJqL0AAAAJ" target="_blank">Google Scholar</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
 </head>
 <body>
 
