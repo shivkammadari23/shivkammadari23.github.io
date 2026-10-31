@@ -14,3 +14,23 @@
 .practice-card .deliverable strong{color:var(--ink);font-size:.78rem;text-transform:uppercase;letter-spacing:.06em}
 .practice-note{margin:24px 0 0;color:var(--muted);font-size:.82rem;max-width:900px}
 @media(max-width:760px){.practice-grid{grid-template-columns:1fr}}
+
+
+/* Horizontal, snap-scrolling portfolio panels */
+html,body{height:100%;overflow:hidden}
+body{display:flex;flex-direction:column}
+.site-header{flex:none}
+main#top{display:flex;flex:1;min-height:0;width:100%;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:thin;scrollbar-color:#b8c9e3 transparent}
+main#top>section{flex:0 0 100vw;width:100vw;max-width:100vw;height:100%;min-height:0;overflow-y:auto;overflow-x:hidden;scroll-snap-align:start;padding-top:38px;padding-bottom:44px}
+main#top>.hero{display:block;padding-left:7%;padding-right:7%;padding-top:8vh}
+main#top>.contact-band{display:flex;align-items:center}
+.site-footer{flex:none}
+nav{overflow-x:auto;max-width:65vw;scrollbar-width:thin}
+nav a{white-space:nowrap}
+@media(max-width:760px){
+  .site-header{min-height:104px}
+  nav{max-width:100%;width:100%;overflow-x:auto;flex-wrap:nowrap;gap:16px}
+  main#top>section{padding-top:24px;padding-bottom:55px}
+  main#top>.hero{padding-top:7vh}
+  .site-footer{display:none}
+}
