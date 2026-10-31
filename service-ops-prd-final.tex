@@ -1,0 +1,33 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}\usepackage[T1]{fontenc}\usepackage{lmodern}
+\usepackage[margin=0.62in]{geometry}\usepackage{xcolor}\usepackage{enumitem}\usepackage{titlesec}\usepackage{tabularx}\usepackage{array}\usepackage{hyperref}
+\hypersetup{colorlinks=true,urlcolor=teal,linkcolor=teal}
+\definecolor{navy}{HTML}{173B45}\definecolor{teal}{HTML}{397D70}\definecolor{muted}{HTML}{596B6F}
+\titleformat{\section}{\large\bfseries\color{navy}}{}{0pt}{}[\vspace{-2pt}\titlerule]
+\titlespacing*{\section}{0pt}{7pt}{4pt}\setlist{nosep,leftmargin=14pt}\renewcommand{\arraystretch}{1.15}
+\begin{document}
+\begin{center}{\LARGE\bfseries\color{navy} Product Requirements Document}\par\vspace{2pt}{\large Service Operations Exception Triage}\par\vspace{3pt}{\small Independent portfolio concept $\cdot$ Version 1.0 $\cdot$ October 2026 $\cdot$ Draft for discovery}\end{center}\vspace{-4pt}
+\noindent\colorbox{navy}{\parbox{\dimexpr\linewidth-2\fboxsep}{\color{white}\small\textbf{Product goal:} Help operations teams spot and triage service exceptions faster while preserving human decision authority.}}
+\section{Problem and target users}
+Operations teams coordinating work orders must balance due windows, regional demand, capacity, and changing information. Static reports may show volume without making exceptions requiring immediate review obvious. The concept is a human-in-the-loop queue for dispatchers/coordinators (find exceptions and understand why flagged), operations leads (see capacity pressure), and service managers (maintain accountability).\\
+\textit{Evidence note:} This independent concept is informed by patterns in prior work-order and operational analytics experience. User needs are hypotheses, not completed interview findings. Prototype records are synthetic.
+\section{Workflow and scope}
+\begin{enumerate}\item Read approved work-order status, due window, region, capacity, and dependency signals.\item Flag possible exceptions with a plain-language reason and source timestamp.\item Let users inspect evidence and linked work orders before acting.\item Allow an explicit human decision: mark reviewed, defer with reason, or route for follow-up.\item In a production system, log reviewer, action, time, rationale, and outcome.\end{enumerate}
+\textbf{Non-goals:} automatic dispatch/reassignment; replacing the system of record; unsupported predictive claims; irreversible updates without confirmation.
+\section{Prioritized requirements and acceptance criteria}
+\small\begin{tabularx}{\linewidth}{>{\bfseries}p{0.55in} X X}\hline Priority & Requirement & Acceptance criteria\\\hline
+P0 & Exception queue & Each row shows exception, region, priority, reason, and relevant due/capacity context.\\
+P0 & Inspectable evidence & User can see triggering signal, source, and timestamp before acting.\\
+P0 & Human control & No assignment/system update occurs without explicit user action and confirmation.\\
+P1 & Severity filters & Queue displays matching rows and visible result count.\\
+P1 & Review disposition & Production version records reviewer, action, timestamp, and defer/override rationale.\\
+P2 & Regional/time trends & Authorized users compare exception volume and resolution time by period.\\\hline\end{tabularx}\normalsize
+\section{Success metrics and guardrails}
+\textbf{Primary:} median time to first meaningful triage action; prioritization accuracy against a reviewed reference set; share of exceptions triaged within the required window.\\
+\textbf{Guardrails:} missed high-severity exceptions, false-positive rate, reopened/deferred items, override rate, stale data exposure, and actions without sufficient evidence. Set baselines and targets after measuring the current workflow; no impact result is claimed for this concept.
+\section{Discovery and validation plan}
+Prior workflow-testing experience relevant to this problem space includes approximately 50 internal participants in alpha testing and nearly 200 users across UAT, task-based usability testing, and observation combined. These aggregate figures refer to activities across the related American Express and Powerhouse operational workflow workstreams, not to validation of this PRD concept. For this concept, next-step validation should recruit dispatchers and operations leads, map current handoffs and escalation rules, and test a prototype with non-sensitive scenarios. Measure time-to-triage, prioritization accuracy, error detection, and whether users can explain why a record was flagged; iterate based on observed errors.
+\section{Open questions}
+Which system is the source of truth? Who defines severity? What data latency or missingness makes recommendations unsafe? Which exceptions require escalation? Which access controls, audit requirements, and integrations are mandatory?
+\vspace{3pt}\noindent\color{muted}\footnotesize\textbf{Prototype note:} The companion web demo uses illustrative synthetic records and local-only review state. It is not connected to an operational system. The alpha/UAT/usability-testing participant figures above refer to prior workflow-testing activities, not validation of this portfolio prototype.
+\end{document}
