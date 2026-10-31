@@ -1,3 +1,48 @@
-% Resume source is maintained alongside the portfolio.
-% Generated PDF: resume.pdf
-See application package for complete source; this repository copy is the build source.
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}\usepackage[T1]{fontenc}\usepackage{lmodern}
+\usepackage[margin=0.68in,top=0.62in,bottom=0.62in]{geometry}
+\usepackage{xcolor,hyperref,enumitem,titlesec,setspace}
+\hypersetup{colorlinks=true,urlcolor=blue,linkcolor=blue}\pagestyle{empty}
+\titleformat{\section}{\large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{10pt}{5pt}
+\setlist[itemize]{leftmargin=*,topsep=1pt,partopsep=0pt,parsep=1.5pt,itemsep=2pt}
+\setlength{\parindent}{0pt}\setlength{\parskip}{0pt}
+\newcommand{\job}[4]{\textbf{#1}\hfill\textit{#2}\\\textit{#3}\hfill\textit{#4}\par\vspace{-3pt}}
+\begin{document}\setstretch{1.03}
+\begin{center}{\LARGE\scshape Shiv S. Kammadari}\\[3pt]
+{\large\bfseries Graduate Product Management $|$ Decision-Support Systems $|$ AI \& Analytics}\\[4pt]
+\href{mailto:ssk63@sfu.ca}{ssk63@sfu.ca} $\cdot$ (813) 585-6404 $\cdot$ \href{https://shivkammadari23.github.io/}{Portfolio} $\cdot$ \href{https://github.com/shivkammadari23}{GitHub} $\cdot$ \href{https://scholar.google.com/citations?hl=en\&user=CRAJqL0AAAAJ}{Google Scholar}\end{center}\vspace{-6pt}
+\section{Profile}
+SIAT graduate student with a multidisciplinary background in analytics, machine learning, software development, and engineering research. Experienced in analyzing operational data, identifying workflow bottlenecks, building decision-support dashboards, and evaluating predictive systems. Applied experience includes workflow evaluation, task-based usability studies, alpha testing, user acceptance testing (UAT), observational testing, and translating operational findings into analytics and decision-support deliverables. Across the related American Express and Powerhouse workflow-testing activities, approximately 50 internal participants took part in alpha testing and nearly 200 users participated across UAT, task-based usability tests, and observation combined. These are aggregate figures across the workstreams, not per-company counts.
+\section{Industry Experience}
+\job{Senior Data Analyst $|$ Product Analytics \& Decision Support}{Dallas, TX}{IT Face Inc.}{2024 -- 2025}
+\begin{itemize}\item Built churn-prediction models in Python and scikit-learn with business stakeholders, contributing to a reported 15\% improvement in retention-strategy effectiveness.\item Created executive Power BI dashboards for integration KPIs and operational risk, reducing manual reporting time by 50\%.\end{itemize}
+\job{Data Analyst $|$ Market Research \& Operations Analytics}{Fort Worth, TX}{Powerhouse Services Inc.}{2024}
+\begin{itemize}\item Analyzed historical work orders across 15+ U.S. states to identify bottlenecks and inform resource allocation; workflow analysis was associated with a reported 25\% improvement in resource-allocation efficiency.\item Forecast service demand using SQL, Excel, and time-series analysis; improved reported forecast accuracy by 35\%.\item Conducted task-based usability studies, workflow-testing sessions, and observational reviews with operational users to assess work-order information and service-planning tasks; synthesized friction points into workflow and reporting recommendations.\item Automated executive reporting workflows, reducing monthly preparation time by 60\%.\end{itemize}
+\job{Data Analyst $|$ Service Workflow \& Model Analytics}{Sunrise, FL}{American Express}{2023 -- 2024}
+\begin{itemize}\item Analyzed support-case data with SQL to identify triage friction and case-categorization patterns, contributing to a reported 25\% reduction in average triage time.\item Conducted task-based usability testing and UAT of support-case triage workflows, observing task completion, case-categorization decisions, and handoff friction; synthesized findings into workflow and reporting recommendations.\item Monitored machine-learning model performance and drift; built Power BI and Tableau KPI dashboards.\end{itemize}
+\newpage\section{Industry Experience (continued)}
+\job{Data Analyst $|$ Experimentation \& Product Analytics}{Dallas, TX}{Unigo Inc.}{2022 -- 2023}
+\begin{itemize}\item Worked with product managers on tracking metrics and hypothesis evaluation for A/B-testing and predictive analytics pipelines; campaign-targeting effectiveness improved by a reported 23\%.\item Maintained Azure DevOps CI/CD pipelines and developed Tableau dashboards that reduced report-generation cycles by 75\%.\end{itemize}
+\job{Data Analyst $|$ Predictive Analytics}{IN}{Eureka IT Solutions}{2019 -- 2020}
+\begin{itemize}\item Developed TensorFlow/Keras revenue-forecasting models, contributing to a reported 40\% improvement in forecast accuracy; standardized data models across business units.\end{itemize}
+\job{Research Associate $|$ Market Intelligence}{IN}{Mordor Intelligence Inc.}{2017 -- 2018}
+\begin{itemize}\item Conducted market-data analysis and time-series forecasting using Python, R, and SAS for research and client deliverables.\end{itemize}
+\section{Applied Research}
+\textbf{Human-in-the-Loop AI: Domain Shift \& Model Explainability}\\\textit{University of South Florida}\hfill\textit{2021--2022}
+\begin{itemize}\item Studied domain shift and transferability in deep-learning medical-image analysis using NIH ChestX-ray14; adapted a ResNet-based approach into IMPACT-Net.\item Developed preprocessing, normalization, augmentation, and balanced-sampling workflows to investigate generalization across data sources.\item Integrated Grad-CAM heatmaps to inspect image regions influencing model predictions and support human review. \href{https://github.com/shivkammadari23/Image-Classification-Deep-Learning-Researchstudy.git}{Research code}.\end{itemize}
+\textbf{Master's Thesis: Experimental \& Simulation Validation}\hfill\textit{BTH and DRDL $|$ Feb 2016 -- May 2017}
+\begin{itemize}\item Correlated physical vibration tests with finite-element simulation to validate dynamic-system behavior; thesis published in DiVA (\href{http://bth.diva-portal.org/smash/record.jsf?pid=diva2:1131591}{publication}).\end{itemize}
+\section{Education}
+\textbf{Simon Fraser University, School of Interactive Arts \& Technology (SIAT)}\hfill\textit{Vancouver, BC}\\
+\textit{M.Sc. student}\hfill Fall 2026 -- Present $\cdot$ Graduate Entrance Fellowship recipient\par
+\textbf{University of South Florida}\hfill\textit{Tampa, FL}\\
+\textit{M.S. Analytics and Information Systems (Analytics and ML)}\hfill 2021--2022\\GPA: 3.63/4.00\par
+\textbf{JNTUH--Blekinge Tekniska H\"ogskola}\\
+\textit{Integrated degree, Mechanical Engineering (Structural Mechanics)}\\Thesis publication linked above.
+\section{Skills}
+\textbf{Product methods:} Stakeholder collaboration, workflow analysis, requirements definition, PRD structure, prioritization, acceptance criteria, metric design, prototype development, usability validation, human-in-the-loop design\\
+\textbf{Analytics \& experimentation:} Python, SQL, scikit-learn, TensorFlow, PyTorch, A/B testing, forecasting, model evaluation, explainable AI (Grad-CAM)\\
+\textbf{Decision-support tools:} Power BI, Tableau, Excel, Git, Azure DevOps, REST APIs, MySQL, Flask, React\\
+\textbf{Systems engineering:} FEA, structural dynamics, MATLAB, SolidWorks, ANSYS
+\end{document}
