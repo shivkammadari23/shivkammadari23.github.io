@@ -1,0 +1,30 @@
+name: Build portfolio PDFs
+on:
+  push:
+    paths:
+      - 'resume-final.tex'
+      - 'service-ops-prd-final.tex'
+      - '.github/workflows/build-pdfs.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install LaTeX
+        run: sudo apt-get update && sudo apt-get install -y texlive-latex-base texlive-latex-recommended texlive-fonts-recommended
+      - name: Build PDFs
+        run: |
+          pdflatex -interaction=nonstopmode -halt-on-error -output-directory=. resume-final.tex
+          pdflatex -interaction=nonstopmode -halt-on-error -output-directory=. service-ops-prd-final.tex
+          cp resume-final.pdf resume.pdf
+          cp service-ops-prd-final.pdf service-ops-prd.pdf
+      - name: Commit PDFs
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add resume.pdf service-ops-prd.pdf
+          git diff --cached --quiet || git commit -m "Build updated resume and PRD PDFs"
+          git push
