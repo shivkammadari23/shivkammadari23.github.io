@@ -9,7 +9,7 @@
 </head><body>
 <header class="site-header">
 <a class="identity" href="#top"><span class="monogram">SK</span><span><strong>Shiv S. Kammadari</strong><small>Product · AI · Decision Support</small></span></a>
-<nav aria-label="Main navigation"><a href="#work">Selected work</a><a href="#practice">Testing & deliverables</a><a class="nav-button" href="resume.pdf" target="_blank" rel="noopener">Resume / CV ↗</a><a href="#about">About</a></nav>
+<nav aria-label="Main navigation"><a href="#work">Selected work</a><a href="#practice">Testing & deliverables</a><a class="nav-button" href="resume.pdf" target="_blank" rel="noopener">View Resume ↗</a><a href="resume.pdf" download>Download Resume PDF ↓</a><a href="#about">About</a></nav>
 </header>
 <main id="top">
 <section class="hero wrap">
@@ -50,7 +50,7 @@
 </div></section>
 <section class="about-section wrap" id="about"><div><p class="eyebrow">About</p><h2>Technical breadth, product focus.</h2></div><div><p>My background spans analytics and machine learning, software development, structural mechanics, and research. I am interested in product work where understanding the workflow and the people using a system matters as much as the underlying technology.</p><div class="skills"><span>Workflow analysis</span><span>Usability testing</span><span>UAT</span><span>Requirements definition</span><span>Analytics</span><span>Explainable AI</span><span>Python · SQL</span><span>Power BI · Tableau</span><span>Systems validation</span></div><p class="contact"><a href="mailto:ssk63@sfu.ca">ssk63@sfu.ca</a> · <a href="https://github.com/shivkammadari23" target="_blank" rel="noopener">GitHub</a> · <a href="https://scholar.google.com/citations?hl=en&user=CRAJqL0AAAAJ" target="_blank" rel="noopener">Google Scholar</a></p></div></section>
 </main>
-<footer><span>© 2026 Shiv S. Kammadari</span><a href="resume.pdf" target="_blank" rel="noopener">Resume / CV PDF ↗</a></footer>
+<footer><span>© 2026 Shiv S. Kammadari</span><span><a href="resume.pdf" target="_blank" rel="noopener">View Resume ↗</a> · <a href="resume.pdf" download>Download Resume PDF ↓</a></span></footer>
 <script>
 (() => {const tabs=[...document.querySelectorAll('.tab')],panels=[...document.querySelectorAll('.project-panel')];function activate(tab){const target=tab.dataset.panel;tabs.forEach(item=>{const selected=item===tab;item.classList.toggle('active',selected);item.setAttribute('aria-selected',String(selected));item.tabIndex=selected?0:-1});panels.forEach(panel=>{const selected=panel.id===target;panel.hidden=!selected;panel.classList.toggle('active',selected)})}tabs.forEach((tab,index)=>{tab.addEventListener('click',()=>activate(tab));tab.addEventListener('keydown',event=>{let next=index;if(event.key==='ArrowRight')next=(index+1)%tabs.length;else if(event.key==='ArrowLeft')next=(index-1+tabs.length)%tabs.length;else if(event.key==='Home')next=0;else if(event.key==='End')next=tabs.length-1;else return;event.preventDefault();tabs[next].focus();activate(tabs[next])})});tabs.forEach((tab,index)=>tab.tabIndex=index===0?0:-1)})();
 </script></body></html>
