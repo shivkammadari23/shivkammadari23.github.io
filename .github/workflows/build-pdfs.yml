@@ -1,4 +1,4 @@
-name: Build portfolio PDFs
+name: Build portfolio PDFs # compile the published resume and PRD from the preserved LaTeX layouts
 on:
   push:
     paths:
